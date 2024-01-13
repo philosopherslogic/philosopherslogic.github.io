@@ -19,40 +19,16 @@ button1.onclick= gostore;
 button2.onclick= gocave;
 button3.onclick= fightdragon;
 
-const location=[
-    {
-       name: 'town square' ,
-       buttontext:["go store","go cave", "fight dragon"],
-       buttonfunction:[gostore,gocave, fightdragon],
-       text:'You are in the town sqare. You see a sign that says\"store\"'
-    }
-    ,{
-        name: 'store' ,
-        buttontext:['buy 10 health(10 gold)','buy weapon(30gold)','go to town square'],
-        buttonfunction:[buyhealth,buyweapon, gotown],
-        text:"you are in the store"
-     }
-];
 
-function update(location){
-  
-    button1.innerText=location[buttontext][0];
-    button2.innerText=location[buttontext][1];
-    button3.innerText=location[buttontext][2];
-    button1.onclick= location[buttonfunction][0];
-    button2.onclick= location[buttonfunction][1];
-    button3.onclick= location[buttonfunction][2];
-    text.innerText= location.text;  
-
-
-
-}
 function gostore(){
-    update(location[1]);    
+    
+    button1.innerText='buy 10 health(10 gold)';
+    button2.innerText='buy weapon(30gold)';
+    button3.innerText='go to town square';
+    text.innerText= "you are in the store";  
 }
 
 function gotown(){
-    update(location[0]);
 }
 function fightdragon(){
 
@@ -66,5 +42,4 @@ function buyweapon(){
 
 function gocave(){
 
-}
-console.log('hi');
+};
